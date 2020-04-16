@@ -116,6 +116,8 @@ class TimeGraph {
 
   Color GetThreadColor(ThreadID tid) const;
   StringManager* GetStringManager() { return string_manager_.get(); }
+  void OnPickedTimer(const Timer& timer);
+  std::string GetFunctionTimerDescription(const Timer& timer) const;
 
  protected:
   void AddTrack(std::unique_ptr<Track> track);
